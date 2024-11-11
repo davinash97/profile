@@ -22,6 +22,10 @@ public class Profile {
 	private String account_type;
 	private String phone;
 	private String email;
+	private String organization;
+	private Integer experience;
+	private static final String POSTS = "/post/";
+	private static final String JOBS = "/job/";
 
 	public Profile(){}
 
@@ -83,6 +87,30 @@ public class Profile {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(String organization) {
+		this.organization = organization;
+	}
+
+	public Integer getExperience() {
+		return experience;
+	}
+
+	public void setExperience(Integer experience) {
+		this.experience = experience;
+	}
+
+	public String getPosts() {
+		return POSTS + this.id;
+	}
+
+	public String getJobs() {
+		return JOBS + this.id;
 	}
 
 	@Override
